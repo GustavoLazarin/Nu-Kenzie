@@ -1,0 +1,21 @@
+.card {
+    height: 5.3125rem;
+    padding: 0.5rem 1rem;
+    border-left: 4px solid var(--secondary);
+    border-radius: 4px 0 0 4px;
+    background: var(--gray-1);
+
+    display: flex;
+    justify-content: space-between;
+    
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 6px;
+    }
+
+    .rigthBox {
+        justify-content: space-evenly;
+    }
+}

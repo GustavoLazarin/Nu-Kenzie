@@ -1,0 +1,14 @@
+.financesSumary {
+    width: 560px;
+    height: 28.25rem;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.cardsList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}

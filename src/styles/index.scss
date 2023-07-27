@@ -1,0 +1,15 @@
+@import "./reset.scss";
+@import "./global.scss";
+@import "./typography.scss";
+@import "./grid.scss";
+@import "./forms.scss";
+
+.left-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.rigth-box {
+    
+}
