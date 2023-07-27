@@ -1,0 +1,35 @@
+.financesSection {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    max-width: 1040px;
+    margin: 0 auto;
+
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    
+    @media (max-width: 810px) {
+        flex-wrap: wrap;
+
+        .formBox {
+            min-width: inherit;
+             width: clamp(0px, 100%, 355px);
+        }
+    }
+}
+
+.formBox {
+    min-width: 355px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cardsBox {
+    width: clamp(0px, 100%, 560px);
+
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}

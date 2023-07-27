@@ -9,7 +9,7 @@ export const Card = ({description, valueType, amount,}) => {
             </div>
             <div className={styles.rigthBox}>
                 <p>{amount.toLocaleString("pt-BR", {style: 'currency', currency: 'BRL'})}</p>
-                <button>Excluir</button>
+                <button className="btn">Excluir</button>
             </div>
         </li>
     )

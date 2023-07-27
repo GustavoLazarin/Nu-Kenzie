@@ -1,5 +1,5 @@
 .financesSumary {
-    width: 560px;
+    width: clamp(0px, 100%, 560px);
     height: 28.25rem;
     
     display: flex;
@@ -8,6 +8,7 @@
 }
 
 .cardsList {
+    width: clamp(0px, 100%, 560px);
     display: flex;
     flex-direction: column;
     gap: 15px;

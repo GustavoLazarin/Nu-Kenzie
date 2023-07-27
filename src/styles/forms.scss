@@ -1,5 +1,5 @@
 input {
-    width: 19.625rem;
+    width: 100%;
     height: 3.125rem;
     padding: 0px 1rem;
     border-radius: 8px;
@@ -18,7 +18,7 @@ input {
 }
 
 select {
-    width: 19.5625rem;
+    width: 100%;
     height: 3rem;
     padding: 0px 1rem;
     border: none;
@@ -37,7 +37,7 @@ select {
 
 .btn.primary {
     display: flex;
-    width: 19.625rem;
+    width: 100%;
     height: 3rem;
     padding: 13px 20px;
     justify-content: center;
@@ -47,6 +47,17 @@ select {
     color: #fff;
     &:hover {
         background-color: var(--primary-2);
+    }
+}
+
+.btn {
+    padding: 3px 9px;
+    background: var(--gray-2);
+    border-radius: 2px;
+    align-self: end;
+
+    &:hover {
+        background: var(--gray-3);
     }
 }
 
