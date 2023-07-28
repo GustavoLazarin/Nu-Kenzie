@@ -1,6 +1,11 @@
 import styles from "./style.module.scss"
 
-export const TotalMoney = ({totalAmount}) => {
+export const TotalMoney = ({list}) => {
+
+    const entryValues = list.filter(finance => finance.valueType === "Entrada");
+
+    const totalAmount = entryValues.reduce((prevValue, entryCard) => prevValue + entryCard.amount, 0)
+
     return (
         <div className={styles.totalMoney}>
             <div>
