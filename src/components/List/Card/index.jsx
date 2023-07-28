@@ -1,6 +1,6 @@
 import styles from "./style.module.scss"
 
-export const Card = ({description, valueType, amount,}) => {
+export const Card = ({id, description, valueType, amount, removeCard}) => {
     return (
         <li className={`${styles.financeCard} ${valueType === "Entrada" ? styles.entry : null}`}>
             <div>
@@ -9,7 +9,7 @@ export const Card = ({description, valueType, amount,}) => {
             </div>
             <div className={styles.rightBox}>
                 <p>{amount.toLocaleString("pt-BR", {style: 'currency', currency: 'BRL'})}</p>
-                <button className="btn">Excluir</button>
+                <button className="btn" onClick={() => removeCard(id)}>Excluir</button>
             </div>
         </li>
     )

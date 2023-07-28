@@ -7,17 +7,27 @@ import styles from "./style.module.scss"
 
 export const FinancesSection = () => {
 
-    const [financesList, setFinancesList] = useState([{description: "Aluguel", valueType: "Entrada", amount:7000}])
+    const [financesList, setFinancesList] = useState([{description: "Rendimentos Semestre 1 - 2023", valueType: "Entrada", amount:7000, id: 1},
+    {description: "Parcela Gol - Julho", valueType: "Despesa", amount:3000, id: 2}])
+
+    const addCard = (newCard) => {
+        setFinancesList([...financesList, newCard])
+    }
+
+    const removeCard = (cardID) => {
+        const filteredList = financesList.filter(card => card.id !== cardID);
+        setFinancesList(filteredList)
+    }
 
     return (
         <section className={styles.financesSection}>
             <div className={styles.formBox}>
-                <Form cardsList={financesList} setCardsList={setFinancesList}/>
+                <Form addCard={addCard}/>
                 {financesList.length > 0 ? <TotalMoney list={financesList}/> : null}
             </div>
             <div className={styles.cardsBox}>
-                <List>                                               {/* console.log ALTERAR A KEYY!*/}
-                    {financesList.length > 0 ? financesList.map(card => <Card key={card.description} description={card.description} valueType={card.valueType} amount={card.amount} />)
+                <List>
+                    {financesList.length > 0 ? financesList.map(card => <Card key={card.id} id={card.id} description={card.description} valueType={card.valueType} amount={card.amount} removeCard={removeCard}/>)
                     : <h2 className="title2">Você ainda não possui nenhum lançamento</h2>}
                 </List>
             </div>

@@ -21,6 +21,7 @@ select {
     width: 100%;
     height: 3rem;
     padding: 0px 1rem;
+    margin-top: 0.625rem;
     border: none;
     border-radius: 8px;
     background: var(--gray-1) url(/src/assets/angle-down.png) 285px 20px no-repeat;
@@ -33,6 +34,10 @@ select {
     :nth-child(1n + 2) {
         color: var(--gray-4);
     }
+}
+
+.empty-alert {
+    border: 2px solid #ff2828;
 }
 
 .btn.primary {
