@@ -15,13 +15,15 @@ export const Form = ({addCard}) => {
 
         const newCard = {
             description: description,
-            amount: parseInt(amount),
+            amount: parseFloat(amount),
             valueType: category,
             id: crypto.randomUUID()
         }
 
         if (newCard.valueType !== "") {
             addCard(newCard);
+
+            console.log(newCard)
 
             //Reset
             setDescription("")

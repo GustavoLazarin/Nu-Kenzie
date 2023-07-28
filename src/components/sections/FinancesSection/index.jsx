@@ -7,8 +7,7 @@ import styles from "./style.module.scss"
 
 export const FinancesSection = () => {
 
-    const [financesList, setFinancesList] = useState([{description: "Rendimentos Semestre 1 - 2023", valueType: "Entrada", amount:7000, id: 1},
-    {description: "Parcela Gol - Julho", valueType: "Despesa", amount:3000, id: 2}])
+    const [financesList, setFinancesList] = useState([])
 
     const addCard = (newCard) => {
         setFinancesList([...financesList, newCard])
