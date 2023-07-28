@@ -20,19 +20,17 @@ export const Form = ({addCard}) => {
             id: crypto.randomUUID()
         }
 
-        if (newCard.valueType !== "") {
-            addCard(newCard);
-
-            console.log(newCard)
+        newCard.valueType !== ""? (
+            addCard(newCard),
 
             //Reset
-            setDescription("")
-            setAmount("")
-            setCategory("")
+            setDescription(""),
+            setAmount(""),
+            setCategory(""),
             setSelectClass("")
-        } else {
-            setSelectClass("empty-alert")
-        }      
+            ) : (
+                setSelectClass("empty-alert")
+            )   
     }
 
     return (
