@@ -23,7 +23,6 @@ export const Form = ({addCard}) => {
         newCard.valueType !== ""? (
             addCard(newCard),
 
-            //Reset
             setDescription(""),
             setAmount(""),
             setCategory(""),
